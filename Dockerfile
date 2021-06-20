@@ -22,7 +22,7 @@ RUN chmod +x /start.sh
 USER minecraft
 
 VOLUME /data
-ADD server.properties /tmp/server.properties
+COPY server.properties /tmp/feed-the-beast/server.properties
 WORKDIR /data
 
 EXPOSE 25565
