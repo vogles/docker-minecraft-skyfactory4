@@ -23,6 +23,7 @@ USER minecraft
 
 VOLUME /data
 COPY server.properties /tmp/feed-the-beast/server.properties
+COPY config/prestige.cfg /tmp/feed-the-beast/config/prestige.cfg
 WORKDIR /data
 
 EXPOSE 25565
