@@ -17,6 +17,9 @@ fi
 if [[ -n "$LEVEL" ]]; then
     sed -i "/level-name\s*=/ c level-name=$LEVEL" /data/server.properties
 fi
+if [[ -n "$GENERATORPRESET" ]]; then
+    sed -i "/generator-settings\s*=/ c generator-settings={\"Topography-Preset\":\"$GENERATORPRESET\"}" /data/server.properties
+fi
 if [[ -n "$OPS" ]]; then
     echo $OPS | awk -v RS=, '{print}' >> ops.txt
 fi
