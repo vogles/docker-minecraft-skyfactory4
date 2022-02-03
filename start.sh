@@ -17,6 +17,9 @@ fi
 if [[ -n "$LEVEL" ]]; then
     sed -i "/level-name\s*=/ c level-name=$LEVEL" /data/server.properties
 fi
+if [[ -n "$SEED" ]]; then
+    sed -i "/level-seed\s*=/ c level-seed=$SEED" /data/server.properties
+fi
 if [[ -n "$GENERATORPRESET" ]]; then
     sed -i "/generator-settings\s*=/ c generator-settings={\"Topography-Preset\":\"$GENERATORPRESET\"}" /data/server.properties
 fi
